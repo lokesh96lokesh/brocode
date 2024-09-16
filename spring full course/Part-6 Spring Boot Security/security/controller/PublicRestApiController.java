@@ -1,41 +1,26 @@
 package spring.security.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import spring.security.dao.UserRepository;
-import spring.security.model.User;
-
-import java.util.List;
 
 /**
- * @Created 13 / 04 / 2020 - 10:21 AM
- * @project SpringSecurityForm
+ * @Created 14 / 04 / 2020 - 3:27 PM
+ * @project SpringUnSecurityPlus
  * @Author Hamdamboy
  */
-@RestController
-@RequestMapping("/api/public")
+
+@Controller
+@RequestMapping("api/public")
 public class PublicRestApiController {
 
-    private UserRepository userRepository;
-
-    public PublicRestApiController(UserRepository userRepository){
-        this.userRepository = userRepository;
+    @GetMapping("test1")
+    public String index(){
+        return "testing 1";
     }
 
-    @GetMapping("/test1")
-    public String test1(){
-        return "API Test 1";
-    }
-
-    @GetMapping("/test2")
-    public String test2(){
-        return "API TEST 2";
-    }
-
-    @GetMapping("/users")
-    public List<User> users(){
-
-        return this.userRepository.findAll();
+    @GetMapping("test2")
+    public String index2(){
+        return "API Test 2";
     }
 }

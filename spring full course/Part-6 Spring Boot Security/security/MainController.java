@@ -1,21 +1,22 @@
-package spring.security.controller;
+package spring.security;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * @Created 14 / 04 / 2020 - 3:27 PM
- * @project SpringUnSecurityPlus
+ * @Created 22 / 04 / 2020 - 3:43 PM
+ * @project SpringHttpToHttps
  * @Author Hamdamboy
  */
 
 @Controller
-@RequestMapping("management")
-public class ManagementController {
+@RequestMapping("")
+public class MainController {
 
     @GetMapping("index")
     public String index(){
-        return "management/index";
+        return "index";
     }
+
 }

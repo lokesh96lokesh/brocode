@@ -3,25 +3,18 @@ package spring.security.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @Created 13 / 04 / 2020 - 10:21 AM
- * @project SpringSecurityForm
+ * @Created 14 / 04 / 2020 - 3:27 PM
+ * @project SpringUnSecurityPlus
  * @Author Hamdamboy
  */
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("")
 public class HomeController {
-    //
     @GetMapping("index")
     public String index(){
         return "index";
-    }
-
-    @GetMapping("login")
-    public String login(){
-        return "login";
     }
 }
